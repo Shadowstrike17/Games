@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T.A.S.K Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hoverable:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-gray-800 p-4">
+        <div class="text-center text-2xl font-bold mb-8">
+          <span class="text-blue-500">T.A.S.K</span> Gaming
+        </div>
+        <nav>
+          <ul>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >Home</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >Games</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >Wallet</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >NFTs</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >Marketplace</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >GamerStream</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >GamerPlay</a
+              >
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >GamerMerch</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"
+                >Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <div class="flex-1 p-6">
+        <header class="flex justify-between items-center mb-8">
+          <h1 class="text-3xl font-bold">Welcome to T.A.S.K Gaming</h1>
+          <div class="flex items-center space-x-4">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search"
+                class="bg-gray-800 rounded-full py-2 px-4 text-sm"
+              />
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>10K</span>
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="relative dropdown">
+              <button class="bg-gray-800 rounded-full py-2 px-4 text-sm">
+                Explore wallet
+              </button>
+              <div
+                class="dropdown-menu absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg py-2 hidden"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-700"
+                  >Explore wallet</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-700"
+                  >Disconnect wallet</a
+                >
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>Gamer1</span>
+              <img
+                src="https://placehold.co/30x30"
+                alt="User Avatar"
+                class="rounded-full"
+              />
+            </div>
+          </div>
+        </header>
+        <section>
+          <div class="mb-8">
+            <img
+              src="PLACEHOLDER_IMAGE_URL"
+              alt="Featured Game"
+              class="rounded-lg shadow-lg"
+            />
+            <!-- Put your image URL here -->
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-4">All games</h2>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              <a
+                href="snake_game.html"
+                class="block bg-gray-800 p-4 rounded-lg hoverable"
+              >
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221204085700/gfg1.gif"
+                  alt="Snake Game"
+                  class="rounded-t-lg"
+                />
+                <h3 class="mt-4 text-xl font-bold">Snake Game</h3>
+              </a>
+              <a
+                href="game2.html"
+                class="block bg-gray-800 p-4 rounded-lg hoverable"
+              >
+                <img
+                  src="PLACEHOLDER_IMAGE_URL"
+                  alt="Game 2"
+                  class="rounded-t-lg"
+                />
+                <!-- Put your image URL here -->
+                <h3 class="mt-4 text-xl font-bold">Game 2</h3>
+              </a>
+              <a
+                href="game3.html"
+                class="block bg-gray-800 p-4 rounded-lg hoverable"
+              >
+                <img
+                  src="PLACEHOLDER_IMAGE_URL"
+                  alt="Game 3"
+                  class="rounded-t-lg"
+                />
+                <!-- Put your image URL here -->
+                <h3 class="mt-4 text-xl font-bold">Game 3</h3>
+              </a>
+              <!-- Add more game tiles as needed -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </body>
+</html>
