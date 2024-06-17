@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T.A.S.K Gaming Hub</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inconsolata", monospace;
+        background-color: #0a0a0a;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .navbar {
+        width: 100%;
+        background-color: #1a1a1a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar h1 {
+        margin: 0;
+        color: #00bfff;
+      }
+
+      .navbar input {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .main {
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 80px;
+        padding: 20px;
+      }
+
+      .hero-section {
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-section h2 {
+        color: #00bfff;
+      }
+
+      .game-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .game-item {
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .game-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      .game-item img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .game-item h2 {
+        font-size: 1.2em;
+        margin: 10px 0 0 0;
+        color: #e0e0e0;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .music-player {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1a1a1a;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .music-player select {
+        background-color: #0a0a0a;
+        color: #00bfff;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .music-player button {
+        background-color: #00bfff;
+        color: #0a0a0a;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .music-player button:hover {
+        background-color: #00a3cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>T.A.S.K Gaming Hub</h1>
+      <input type="text" placeholder="Search..." />
+    </div>
+    <div class="main">
+      <div class="hero-section">
+        <h2>Welcome to T.A.S.K Gaming Hub</h2>
+        <p>
+          Explore the future of gaming across multiple genres, all in one place.
+        </p>
+        <button>Explore Games</button>
+      </div>
+      <h2>All Games</h2>
+      <div class="game-list">
+        <a href="snake.html" class="game-item">
+          <img src="snake_game_image.png" alt="Snake Game" />
+          <h2>Snake Game</h2>
+        </a>
+        <a href="pong.html" class="game-item">
+          <img src="pong_game_image.png" alt="Pong Game" />
+          <h2>Pong Game</h2>
+        </a>
+        <a href="gorilla.html" class="game-item">
+          <img src="gorilla_game_image.png" alt="Gorilla Game" />
+          <h2>Gorilla Game</h2>
+        </a>
+        <a href="game4.html" class="game-item">
+          <img src="game4_image.png" alt="Game 4" />
+          <h2>Game 4</h2>
+        </a>
+      </div>
+    </div>
+    <div class="music-player">
+      <select id="music-select">
+        <option value="treat.mp3">White Tees</option>
+        <option value="https://example.com/music2.mp3">Music 2</option>
+        <option value="https://example.com/music3.mp3">Music 3</option>
+      </select>
+      <button onclick="playMusic()">Play</button>
+      <button onclick="pauseMusic()">Pause</button>
+      <audio id="audio-player" src="treat.mp3"></audio>
+    </div>
+    <script>
+      const audioPlayer = document.getElementById("audio-player");
+      const musicSelect = document.getElementById("music-select");
+
+      function playMusic() {
+        audioPlayer.src = musicSelect.value;
+        audioPlayer.play();
+      }
+
+      function pauseMusic() {
+        audioPlayer.pause();
+      }
+    </script>
+  </body>
+</html>
